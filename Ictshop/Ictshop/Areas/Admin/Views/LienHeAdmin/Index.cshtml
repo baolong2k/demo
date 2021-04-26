@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Ictshop.Models.Contact>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Góp ý</h2>
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+@using (Html.BeginForm("Index", "LienHeAdmin", FormMethod.Get))
+{
+    @Html.TextBox("searching")
+    <input type="submit" value="Search" />
+}
+<table class="table">
+    <tr>
+        <th>
+            Tên
+        </th>
+        <th>
+            Địa chỉ
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            Lời nhắn
+        </th>
+        <th>Hành động</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+            <td>
+
+                <a href="@Url.Action("Details","LienHeAdmin", new {id=item.ID})"><img style="width:20px;height:20px" src="~/HinhanhSP/detail.png" /></a> |
+                <a href="@Url.Action("Delete","LienHeAdmin",new {id=item.ID})"><img style="width:20px;height:20px" src="~/HinhanhSP/delete.png" /></a>
+                
+            </td>
+        </tr>
+    }
+
+</table>

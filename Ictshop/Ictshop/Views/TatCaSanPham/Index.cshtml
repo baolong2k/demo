@@ -1,0 +1,42 @@
+﻿@using Ictshop.Models;
+@model List<Sanpham>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="row">
+    <div class=" bg-danger"><h3 style="padding-left:20px;padding-top:50px;"> Tất cả sản phẩm </h3></div>
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3 col-sm-6">
+            <a href="@Url.Action("xemchitiet","SanPham", new {@Masp=item.Masp })">
+                <img style="width:250px;height:300px;" src=@Url.Content("~/HinhanhSP/"+item.Anhbia) class="img-responsive" alt="" width="400" height="400" />
+            </a>
+            <center>
+                <h3>@item.Tensp</h3>
+                <div class="price"><h3>@String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"),"{0:c}", @item.Giatien)</h3></div>
+                @*<h3 style="color:red">Giá: @item.Giatien</h3>*@
+                <br />
+                @using (Html.BeginForm("ThemGioHang", "GioHang", new { @iMasp = item.Masp, @strURL = Request.Url.ToString() }))
+                {
+                    <input class="w3-btn w3-blue" type="submit" value="Mua hàng" id="bgnGioHang" />
+
+                }
+                @*<h4> <a href="@Url.Action("xemchitiet", new {@Masp=item.Masp })">Xem chi tiết</a></h4>*@
+            </center>
+
+        </div>
+    }
+    @*<div class="col-md-3 col-sm-6">
+            <img src="~/HinhanhSP/ip3.jpg" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <img src="~/HinhanhSP/ip3.jpg" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <img src="~/HinhanhSP/ip3.jpg" class="img-responsive" alt="" />
+        </div>*@
+</div>
+

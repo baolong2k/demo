@@ -1,0 +1,62 @@
+﻿@using Ictshop.Models
+@model Sanpham
+
+
+@{
+    ViewBag.Title = "xemchitiet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .sanp{
+        font-size:20px; 
+    }
+    .in{
+        margin-left:50px;
+    }
+    .info{
+        font-family:Georgia;
+    }
+    .ico{
+        text-align:left;
+        margin:auto;
+        font-size:15px;
+    }
+</style>
+<br />
+
+<CENTER>
+    <div class="sanp">
+        <h2 style="border:2px solid gray;width:400px;height:40px;text-align:center;background-color:white;font-family:'Lucida Handwriting'">CHI TIẾT SẢN PHẨM</h2>
+        <img style="float:left; margin-bottom:40px;width:40%;height:38.5%" src="@Url.Content("~/HinhanhSP/" +@Model.Anhbia)" />
+        <br />
+        <h2 style="text-align:left;font-family:'Comic Sans MS'"> &emsp;&emsp;@Model.Tensp</h2>
+        <div class="price" style="text-align:left;">&ensp;&emsp;&emsp;<h3>&ensp;&emsp;&emsp;Giá: @String.Format(System.Globalization.CultureInfo.GetCultureInfo("vi-VN"), "{0:c}", Model.Giatien)</h3></div>
+        <div class="ico">
+            &emsp;&emsp;&emsp;&emsp;
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+        <br />
+        <div class="info">
+            <h3 style="text-align:left;"><strong>&emsp;&emsp;Thông tin sản phẩm</strong></h3>
+            <p style="text-align:left;">&ensp;&emsp;&emsp;Thẻ sim: @Model.Thesim</p>
+            <p style="text-align:left;">&ensp;&emsp;&emsp;Bộ nhớ trong: @Model.Bonhotrong Gb</p>
+            <p style="text-align:left;">&ensp;&emsp;&emsp;RAM: @Model.Ram Gb</p>
+            <p style="text-align:left;">&ensp;&emsp;&emsp;Mô tả: @Model.Mota</p>
+            @using (Html.BeginForm("ThemGioHang", "GioHang", new { @iMasp = Model.Masp, @strURL = Request.Url.ToString() }))
+            {
+                <input class="in w3-btn w3-blue" style="float:left" type="submit" value="Mua hàng" id="bgnGioHang" />
+
+            }
+        </div>
+
+    </div>
+</CENTER>

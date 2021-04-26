@@ -1,0 +1,20 @@
+﻿@using Ictshop.Models;
+@model List<Hangsanxuat>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<br />
+
+<div style="background-color:#F4FA58;margin-bottom:50px;" class="bg-success">
+
+    <h3 style="font-family:'Comic Sans MS'"> DANH MỤC  </h3>
+
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-1" style="width:170px;border-spacing:20px 10px;">
+                <button style="width:140px;" class="success w3-btn w3-black"> @item.Tenhang</button>
+            </div>
+        }
+    </div>
+</div>

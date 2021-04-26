@@ -1,0 +1,55 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@model PagedList.IPagedList<Ictshop.Models.Sanpham>
+
+@{
+    ViewBag.Title = "KetQuaTimKiem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="padding-top:50px;">Kết quả tìm kiếm</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Tên sản phẩm
+        </th>
+        <th>
+            Giá tiền
+        </th>
+        <th>
+            Tên hãng
+        </th>
+        <th>
+            Hệ điều hành
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tensp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Giatien)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hangsanxuat.Tenhang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hedieuhanh.Tenhdh)
+            </td>
+            <td>
+                <a href="@Url.Action("xemchitiet","SanPham", new {@Masp=item.Masp })">Chi tiết</a>
+                @*<a href="@Url.Action("xemchitiet","Sanpham", new {id=item.Masp})"><img style="width:20px;height:20px" src="~/HinhanhSP/detail.png" /></a> |*@
+                @*@Html.ActionLink("Xem chi tiet", "Details",, new { id = item.Masp }) |*@
+            </td>
+        </tr>
+    }
+
+</table>
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("KetQuaTimKiem",new { page = page, @tukhoa = ViewBag.TuKhoa}))

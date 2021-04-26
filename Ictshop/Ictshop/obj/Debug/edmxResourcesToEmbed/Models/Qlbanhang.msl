@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLdienthoaiModelStoreContainer" CdmEntityContainer="Qlbanhang">
+    <EntitySetMapping Name="Carts">
+      <EntityTypeMapping TypeName="QLdienthoaiModel.Cart">
+        <MappingFragment StoreEntitySet="Cart">
+          <ScalarProperty Name="Tien" ColumnName="Tien" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+          <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+          <ScalarProperty Name="MaSP" ColumnName="MaSP" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chitietdonhangs">
+      <EntityTypeMapping TypeName="QLdienthoaiModel.Chitietdonhang">
+        <MappingFragment StoreEntitySet="Chitietdonhang">
+          <ScalarProperty Name="Dongia" ColumnName="Dongia" />
+          <ScalarProperty Name="Soluong" ColumnName="Soluong" />
+          <ScalarProperty Name="Masp" ColumnName="Masp" />
+          <ScalarProperty Name="Madon" ColumnName="Madon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="QLdienthoaiModel.Contact">
+        <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Donhangs">
+      <EntityTypeMapping TypeName="QLdienthoaiModel.Donhang">
+        <MappingFragment StoreEntitySet="Donhang">
+          <ScalarProperty Name="MaNguoidung" ColumnName="MaNguoidung" />
+          <ScalarProperty Name="Tinhtrang" ColumnName="Tinhtrang" />
+          <ScalarProperty Name="Ngaydat" ColumnName="Ngaydat" />
+          <ScalarProperty Name="Madon" ColumnName="Madon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hangsanxuats">
+      <EntityTypeMapping TypeName="QLdienthoaiModel.Hangsanxuat">
+        <MappingFragment StoreEntitySet="Hangsanxuat">
+          <ScalarProperty Name="Tenhang" ColumnName="Tenhang" />
+          <ScalarProperty Name="Mahang" ColumnName="Mahang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hedieuhanhs">
+      <EntityTypeMapping TypeName="QLdienthoaiModel.Hedieuhanh">
+        <MappingFragment StoreEntitySet="Hedieuhanh">
+          <ScalarProperty Name="Tenhdh" ColumnName="Tenhdh" />
+          <ScalarProperty Name="Mahdh" ColumnName="Mahdh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nguoidungs">
+      <EntityTypeMapping TypeName="QLdienthoaiModel.Nguoidung">
+        <MappingFragment StoreEntitySet="Nguoidung">
+          <ScalarProperty Name="Diachi" ColumnName="Diachi" />
+          <ScalarProperty Name="IDQuyen" ColumnName="IDQuyen" />
+          <ScalarProperty Name="Matkhau" ColumnName="Matkhau" />
+          <ScalarProperty Name="Dienthoai" ColumnName="Dienthoai" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Hoten" ColumnName="Hoten" />
+          <ScalarProperty Name="MaNguoiDung" ColumnName="MaNguoiDung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhanQuyens">
+      <EntityTypeMapping TypeName="QLdienthoaiModel.PhanQuyen">
+        <MappingFragment StoreEntitySet="PhanQuyen">
+          <ScalarProperty Name="TenQuyen" ColumnName="TenQuyen" />
+          <ScalarProperty Name="IDQuyen" ColumnName="IDQuyen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sanphams">
+      <EntityTypeMapping TypeName="QLdienthoaiModel.Sanpham">
+        <MappingFragment StoreEntitySet="Sanpham">
+          <ScalarProperty Name="Mahdh" ColumnName="Mahdh" />
+          <ScalarProperty Name="Mahang" ColumnName="Mahang" />
+          <ScalarProperty Name="Anhbia" ColumnName="Anhbia" />
+          <ScalarProperty Name="Ram" ColumnName="Ram" />
+          <ScalarProperty Name="Sanphammoi" ColumnName="Sanphammoi" />
+          <ScalarProperty Name="Bonhotrong" ColumnName="Bonhotrong" />
+          <ScalarProperty Name="Thesim" ColumnName="Thesim" />
+          <ScalarProperty Name="Mota" ColumnName="Mota" />
+          <ScalarProperty Name="Soluong" ColumnName="Soluong" />
+          <ScalarProperty Name="Giatien" ColumnName="Giatien" />
+          <ScalarProperty Name="Tensp" ColumnName="Tensp" />
+          <ScalarProperty Name="Masp" ColumnName="Masp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QLdienthoaiModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

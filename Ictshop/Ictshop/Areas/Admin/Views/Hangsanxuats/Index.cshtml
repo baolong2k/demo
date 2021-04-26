@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Ictshop.Models.Hangsanxuat>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Quản lý hãng điện thoại</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới hãng", "Create")
+</p>
+@using (Html.BeginForm("Index", "Hangsanxuats", FormMethod.Get))
+{
+    @Html.TextBox("searching")
+    <input type="submit" value="Search" />
+}
+<table class="table">
+    <tr>
+
+        <th>
+            Mã hãng
+        </th>
+        <th>
+            Tên hãng
+        </th>
+        <th>Hành động</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mahang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tenhang)
+            </td>
+            <td>
+                <a href="@Url.Action("Edit","Hangsanxuats",new { id = item.Mahang })"><img style="width:20px;height:20px" src="~/HinhanhSP/fix.png" /></a> |
+                <a href="@Url.Action("Details","Hangsanxuats", new {id=item.Mahang})"><img style="width:20px;height:20px" src="~/HinhanhSP/detail.png" /></a> |
+                <a href="@Url.Action("Delete","Hangsanxuats",new {id=item.Mahang})"><img style="width:20px;height:20px" src="~/HinhanhSP/delete.png" /></a>
+            </td>
+        </tr>
+    }
+
+</table>

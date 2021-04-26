@@ -1,0 +1,125 @@
+﻿@{
+    ViewBag.Title = "Shop mobile";
+
+}
+<style>
+    .abc {
+        border: 2px none;
+        width: 100%;
+        height: 40%;
+        margin: auto;
+        margin-top: 50px;
+        background-color: #F4FA58;
+        margin-bottom:30px;
+    }
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<br />
+<div class="row">
+    <div style="padding-top:10px;" class="col-md-8">
+        @Html.Action("SlidePartial", "Home")
+    </div>
+    <div style="padding-top:10px;" class="col-md-4">
+        <img style="height:392px;" src="~/HinhanhSP/bannerGift.jpg" class="img-responsive" alt="" />
+        <p></p>
+    </div>
+</div>
+<div>
+    <br />
+    <img class="img-responsive" src="~/HinhanhSP/ban1.jpg" />
+</div>
+<br />
+<a name="aboutUs"></a>
+<div class="spnoibat">
+    <div class="row">
+        <h3> SẢN PHẨM NỔI BẬT</h3>
+        <div class="col-md-4">
+            <img style="height:210px" src="~/HinhanhSP/anhQC1.jpg" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-4">
+            <img src="~/HinhanhSP/spnb2.png" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-4">
+            <img src="~/HinhanhSP/spnb3.png" class="img-responsive" alt="" />
+        </div>
+    </div>
+</div>
+
+<div class="container abc">
+        <h2 style="background-color:#F4FA58">CHÍNH SÁCH</h2>
+        <div class="row no-gutters ftco-services">
+            <div style="padding-top:30px;padding-bottom:45px;background-color:#D8F6CE" class="col-lg-3 text-center d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services mb-md-0 mb-4">
+                    <div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
+                        <span style="font-size:60px;" class="fa fa-truck"></span>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Miễn phí vận chuyển</h3>
+                        <span>Cho đơn hàng dưới 10 triệu đồng</span>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top:30px;padding-bottom:45px;background-color:#E1F5A9" class="col-lg-3 text-center d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services mb-md-0 mb-4">
+                    <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
+                        <span style="font-size:60px;" class="fa fa-gift"></span>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">ƯU đãi</h3>
+                        <span>Nhiều phần quà hấp dẫn</span>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top:30px;padding-bottom:45px;background-color:#CEF6F5" class="col-lg-3 text-center d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services mb-md-0 mb-4">
+                    <div class="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
+                        <span style="font-size:60px;" class="fa fa-check"></span>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Chất lượng</h3>
+                        <span>Chất lượng sản phẩm tốt</span>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top:30px;padding-bottom:41px;background-color:#ECE0F8" class="col-lg-3 text-center d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services mb-md-0 mb-4">
+                    <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
+                        <span style="font-size:60px;" class="glyphicon glyphicon-user"></span>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Hỗ trợ</h3>
+                        <span>Hỗ trợ 24/7</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<div class="danhmuc">
+    @Html.Action("DanhmucPartial", "Danhmuc")
+</div>
+<div class="dt">
+
+    @Html.Action("dtiphonePartial", "Sanpham")
+</div>
+<div class="dt">
+
+    @Html.Action("dtsamsungpartial", "Sanpham")
+</div>
+
+<div class="dt">
+
+    @Html.Action("dtxiaomipartial", "Sanpham")
+</div>
+
+@*<div class="row">
+        <h2> Tin tức sản phẩm</h2>
+        <div class="col-md-8">
+            Video
+        </div>
+        <div class="col-md-4">
+            Tin tức
+        </div>
+    </div>*@
+
